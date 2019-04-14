@@ -40,3 +40,10 @@ account required pam_permit.so <br>
 ```echo "auth required pam_pwdfile.so pwdfile /etc/vsftpd/.passwd" | sudo tee /etc/pam.d/vsftpd``` <br>
 ``` echo "account required pam_permit.so" | sudo tee -a /etc/pam.d/vsftpd``` <br>
 
+### 4. Create userlist file
+```sudo echo ftpsuser | sudo tee -a /etc/vsftpd/vsftpd.userlist```
+
+### 5. Create empty ch_root dir
+```sudo mkdir -p /var/run/vsftpd/empty```
+
+
