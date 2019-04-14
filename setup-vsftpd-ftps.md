@@ -27,3 +27,6 @@
 ```openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout vsftpd.pem -out vsftpd.pem```
 (Note: While giving common name put hostname)</br>
 ```sudo chmod 600 vsftpd.pem``` </br>
+
+### 3. Setup PAM
+```cd /etc/vsftpd ``` <br>
