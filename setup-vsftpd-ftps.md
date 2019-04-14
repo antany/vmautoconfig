@@ -17,13 +17,13 @@
 ```makepkg -si```</br>
 
 ## Setup vsftpd
-####1. Create user (for this document purpose i used "ftpsuser" as username and "o" as password)
-```sudo useradd -m -s /bin/bash ftpsuser```
-```sudo passwd ftpsuser```
+### 1. Create user (for this document purpose i used "ftpsuser" as username and "o" as password) </br>
+```sudo useradd -m -s /bin/bash ftpsuser```</br>
+```sudo passwd ftpsuser```</br>
 
-####2. Create certificate
-```cd /etc && sudo mkdir vsftpd```
-```cd vsftpd```
+### 2. Create certificate </br>
+```cd /etc && sudo mkdir vsftpd```</br>
+```cd vsftpd```</br>
 ```openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -keyout vsftpd.pem -out vsftpd.pem```
 (Note: While giving common name put hostname)
-```sudo chmod 600 vsftpd.pem```
+```sudo chmod 600 vsftpd.pem``` </br>
