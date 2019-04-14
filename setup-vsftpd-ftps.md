@@ -48,9 +48,13 @@ account required pam_permit.so <br>
 
 ### 6. modify vsftpd.conf file
 
+```sudo vim /etc/vsftpd.conf ```
+
+and copy the below lines
+
 ```
-listen=NO
-listen_ipv6=YES
+listen=YES
+listen_ipv6=NO
 anonymous_enable=NO
 local_enable=YES
 write_enable=YES
@@ -68,10 +72,10 @@ pasv_max_port=11000
 user_sub_token=$USER
 local_root=/home/$USER/ftp
 userlist_enable=YES
-userlist_file=/etc/vsftpd.userlist
+userlist_file=/etc/vsftpd/vsftpd.userlist
 userlist_deny=NO
-rsa_cert_file=/etc/ssl/private/vsftpd.pem
-rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+rsa_cert_file=/etc/vsftpd/vsftpd.pem
+rsa_private_key_file=/etc/vsftpd/vsftpd.pem
 ssl_enable=YES
 allow_anon_ssl=NO
 force_local_data_ssl=YES
@@ -79,4 +83,6 @@ force_local_logins_ssl=YES
 ssl_tlsv1=YES
 ssl_sslv2=NO
 ssl_sslv3=NO
+#uncomment below, if the client doesnt support ssl reuse
+#require_ssl_reuse=NO 
 ```
