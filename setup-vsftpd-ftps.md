@@ -83,6 +83,13 @@ force_local_logins_ssl=YES
 ssl_tlsv1=YES
 ssl_sslv2=NO
 ssl_sslv3=NO
+user_sub_token=$USER
 #uncomment below, if the client doesnt support ssl reuse
 #require_ssl_reuse=NO 
 ```
+
+### 7. Test vsftpd
+Before enable / disabling service, you can test vsftpd by justing running below
+
+``` sudo vsftpd ```
+if no error, try connect using any ftp client, "must use ftp tls explicit connect option"
