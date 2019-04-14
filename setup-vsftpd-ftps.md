@@ -12,6 +12,6 @@
 ```sudo pacman -S git```
 
 ### 3. Install libpam_pwdfile
-```git clone https://aur.archlinux.org/libpam_pwdfile.git```
-```cd libpam_pwdfile```
-```makepkg -si```
+```git clone https://aur.archlinux.org/libpam_pwdfile.git``` </br>
+```cd libpam_pwdfile```</br>
+```makepkg -si```</br>
