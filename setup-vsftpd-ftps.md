@@ -6,8 +6,8 @@
 3. libpam_pwdfile (for pam module setup)
 
 ### 1. Install VSFTPD
-'''sudo pacman -S vsftpd'''
+```sudo pacman -S vsftpd```
 
 ### 2. Install git
-'''sudo pacman -S git'''
+```sudo pacman -S git```
 
