@@ -30,3 +30,13 @@
 
 ### 3. Setup PAM
 ```cd /etc/vsftpd ``` <br>
+```sudo echo -n "ftpsuser:" | sudo tee .passwd && openssl passwd -1 | sudo tee -a .passwd```
+(the password provided here is used by ftp client) <br>
+
+Create file /etc/pam.d/vsftpd and add the below lines <br>
+auth required pam_pwdfile.so pwdfile /etc/vsftpd/.passwd <br>
+account required pam_permit.so <br>
+
+```echo "auth required pam_pwdfile.so pwdfile /etc/vsftpd/.passwd" | sudo tee /etc/pam.d/vsftpd``` <br>
+``` echo "account required pam_permit.so" | sudo tee -a /etc/pam.d/vsftpd``` <br>
+
