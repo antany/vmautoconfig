@@ -90,6 +90,7 @@ ssl_sslv3=NO
 user_sub_token=$USER
 #uncomment below, if the client doesnt support ssl reuse
 #require_ssl_reuse=NO
+seccomp_sandbox=NO
 chroot_list_enable=YES
 chroot_list_file=/etc/vsftpd/chroot_list
 ```
