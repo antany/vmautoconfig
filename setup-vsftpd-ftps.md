@@ -43,10 +43,14 @@ account required pam_permit.so <br>
 ### 4. Create userlist file
 ```sudo echo ftpsuser | sudo tee -a /etc/vsftpd/vsftpd.userlist```
 
-### 5. Create empty ch_root dir
+### 5. Create empty ch_root dir (this need to be done after everytime you reboot the server)
 ```sudo mkdir -p /var/run/vsftpd/empty```
 
-### 6. modify vsftpd.conf file
+### 6. create empty chroot list file
+```sudo touch /etc/vsftpd/chroot_list```
+
+
+### 7. modify vsftpd.conf file
 
 ```sudo vim /etc/vsftpd.conf ```
 
@@ -85,7 +89,9 @@ ssl_sslv2=NO
 ssl_sslv3=NO
 user_sub_token=$USER
 #uncomment below, if the client doesnt support ssl reuse
-#require_ssl_reuse=NO 
+#require_ssl_reuse=NO
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd/chroot_list
 ```
 
 ### 7. Test vsftpd
