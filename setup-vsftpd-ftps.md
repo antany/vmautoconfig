@@ -49,8 +49,11 @@ account required pam_permit.so <br>
 ### 6. create empty chroot list file
 ```sudo touch /etc/vsftpd/chroot_list```
 
+### 7. create root folder for ftp in read only mode
+```mkdir -p /home/ftpsuser/ftp```
+```chmod 554 ftp```
 
-### 7. modify vsftpd.conf file
+### 8. modify vsftpd.conf file
 
 ```sudo vim /etc/vsftpd.conf ```
 
@@ -74,7 +77,7 @@ pasv_enable=Yes
 pasv_min_port=10000
 pasv_max_port=11000
 user_sub_token=$USER
-local_root=/home/$USER
+local_root=/home/$USER/ftp
 userlist_enable=YES
 userlist_file=/etc/vsftpd/vsftpd.userlist
 userlist_deny=NO
@@ -95,7 +98,7 @@ chroot_list_enable=YES
 chroot_list_file=/etc/vsftpd/chroot_list
 ```
 
-### 7. Test vsftpd
+### 9. Test vsftpd
 Before enable / disabling service, you can test vsftpd by justing running below
 
 ``` sudo vsftpd ```
