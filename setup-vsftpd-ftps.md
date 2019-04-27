@@ -104,5 +104,9 @@ Before enable / disabling service, you can test vsftpd by justing running below
 ``` sudo vsftpd ```
 if no error, try connect using any ftp client, "must use ftp tls explicit connect option"
 
+### 10. Enable vsftpd service
+``` sudo systemctl enable vsftpd ```
+``` sudo systemctl start vsftpd ```
+
 
 
