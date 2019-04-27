@@ -108,5 +108,7 @@ if no error, try connect using any ftp client, "must use ftp tls explicit connec
 ``` sudo systemctl enable vsftpd ```
 ``` sudo systemctl start vsftpd ```
 
+### 11. Troubleshooting
+1. When copying files to the root directory, transfer will fail due to the readonly permission. work arround create another folder inside root directory with rw permission
 
 
