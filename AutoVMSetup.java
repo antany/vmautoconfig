@@ -48,7 +48,7 @@ public class AutoVMSetup {
 		
 
 		for (int i = 0; i < contents.length; i++) {
-			System.out.println(i);
+			//System.out.println(i);
 
 			String contentLine = contents[i];
 			
