@@ -19,8 +19,10 @@ public class AutoVMSetup {
 		HashMap<String, HostMap> map = new HashMap<>();
 		while ((inputLine = in.readLine()) != null) {
 			String[] data = inputLine.split(" ");
+			if(data.length > 2) {
 			HostMap hm = new HostMap(data[0], data[2], data[1]);
 			map.put(data[0], hm);
+			}	
 		}
 		in.close();
 
